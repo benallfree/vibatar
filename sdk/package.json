@@ -1,0 +1,22 @@
+{
+  "name": "vibatar",
+  "version": "0.1.0",
+  "description": "Official SDK for integrating Vibatar avatars into your games",
+  "type": "module",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "vibatar",
+    "avatar",
+    "3d",
+    "gaming",
+    "cross-game"
+  ],
+  "author": "Vibatar",
+  "license": "MIT",
+  "peerDependencies": {
+    "three": "^0.162.0"
+  }
+}
