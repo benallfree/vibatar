@@ -11,7 +11,7 @@ RUN bun install --frozen-lockfile
 # Copy source code
 COPY . .
 
-# Build the application
+# Build the client application
 RUN bun run build
 
 # Production stage
@@ -19,15 +19,18 @@ FROM oven/bun:1-slim
 
 WORKDIR /app
 
-# Copy built assets from builder
-COPY --from=builder /app/dist ./dist
+# Copy server files and dependencies
+COPY --from=builder /app/server ./server
+COPY --from=builder /app/client/dist ./client/dist
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/bun.lock ./
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/vite.config.ts ./
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE 3000
 
-# Start the application
-CMD ["bun", "run", "preview", "--host", "0.0.0.0", "--port", "8080"] 
+# Set production environment
+ENV NODE_ENV=production
+
+# Start the server
+CMD ["bun", "run", "start"] 
