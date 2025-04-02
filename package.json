@@ -16,6 +16,8 @@
     "lucide-react": "^0.486.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-error-boundary": "^5.0.0",
+    "react-router-dom": "^7.4.1",
     "react-syntax-highlighter": "^15.6.1",
     "three": "^0.175.0"
   },
@@ -32,9 +34,21 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.29.0",
     "vite": "^6.2.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
   }
 }

@@ -48,7 +48,7 @@ export async function load(username, options = {}) {
 
   try {
     // In a real implementation, this would fetch from your CDN
-    const url = `https://api.vibatar.com/avatars/${username}`
+    const url = `https://vibatar.io/${username}.gltf`
     const gltf = await loader.loadAsync(url)
     const model = gltf.scene
 
