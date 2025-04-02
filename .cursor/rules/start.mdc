@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+* we use bun
+* [vite.config.ts](mdc:vite.config.ts) is our backend
+* We deploy to fly.io
